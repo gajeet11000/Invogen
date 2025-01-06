@@ -1,0 +1,27 @@
+{% extends 'account/base.html' %}
+
+{% block title_html %}
+    Login | Invogen
+{% endblock title_html %}
+    
+{% block body_html %}
+
+<div class="container  card  shadow-md p-5 form-layout">
+
+    <h3> Login to your account </h3>
+
+    <form method="POST" autocomplete="off">
+
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-primary navbar-btn text-white w-100 p-2"> <i class="fa fa-key" aria-hidden="true"></i> &nbsp; Login </button>
+
+    </form>
+
+    <a href="{% url 'reset_password' %}">Forgotten your password?</a>
+
+    <a href="#">Sign in with google</a>
+
+</div>
+
+{% endblock body_html %}

@@ -1,0 +1,16 @@
+{% extends 'account/base.html' %}
+
+
+{% block title_html %}
+    Delete Account | Invogen
+{% endblock title_html %}
+    
+
+{% block body_html %}
+
+<form action="{% url 'delete-account' %}" method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger btn-md w-100 btn-block p-3 rounded" type="submit">Delete my account</button>
+</form>
+
+{% endblock body_html %}

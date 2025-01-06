@@ -1,0 +1,37 @@
+{% extends 'account/base.html' %}
+
+
+{% block title_html %}
+    Dashboard | Invogen
+{% endblock title_html %}
+    
+
+{% block body_html %}
+
+<h1>dashabord</h1>
+
+<p>hi {{ user }}</p>
+
+<div >
+    Your buisness details
+    <a href="#">Add details</a>
+    <a href="#">View all</a>
+</div>
+<div >
+    Invoices
+    <a href="#">Create a new invoice</a>
+    <a href="#">View all invoices</a>
+</div>
+<div >
+    Items
+    <a href="#">Create a new item</a>
+    <a href="#">View all items</a>
+</div>
+<div >
+    Clients
+    <a href="#">Add a new client </a>
+    <a href="#">View all clients</a>
+</div>
+
+{% endblock body_html %}
+    

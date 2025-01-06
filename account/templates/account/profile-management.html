@@ -1,0 +1,38 @@
+{% extends 'account/base.html' %}
+
+
+{% block title_html %}
+    Profile | Invogen
+{% endblock title_html %}
+    
+
+{% block body_html %}
+
+    <div class='container card shadow-md p-5 form-layout'>
+
+        <h3> Update your account </h3>
+        <form method="POST" autocomplete="off">
+
+            {% csrf_token %}
+            {{UserUpdateForm}}
+            <button class="btn btn-primary btn-md w-100 btn-block p-3" type="submit"> <i class="fa fa-user-plus" aria-hidden="true"></i> &nbsp; Update </button>
+
+    </div>
+
+    <div class='container card shadow-md p-5 form-layout'>
+
+        <h3>Reset your password.</h3>
+        <p >Clicl below to change your password</p>
+        <a class="btn btn-primary btn-md w-100 btn-block p-3" type="submit" href="{% url 'reset_password' %}" > &nbsp; Change password <a/>
+
+    </div>
+
+    <div class='container card shadow-md p-5 form-layout'>
+
+        <h3> Delete your account </h3>
+        <p>Are you sure you want to delete your account?</p>
+        <a class="btn btn-danger btn-md w-100 btn-block p-3" type="submit" href="{% url 'delete-account' %}" > &nbsp; Delete my account <a/>
+        
+    </div>
+
+{% endblock body_html %}

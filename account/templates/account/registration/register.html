@@ -1,0 +1,14 @@
+{% block content %}
+
+<form method="POST" autocomplete="off">
+
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="btn btn-primary navbar-btn text-white w-100 p-2"> &nbsp; Create account </button>
+
+</form>
+
+<a href="{% url 'login' %}">Already got an account?</a>
+<a href="#">Sign up with google</a>
+
+{% endblock %}
